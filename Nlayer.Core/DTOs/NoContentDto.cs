@@ -4,9 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Nlayer.Core.DTOs
+namespace Nlayer.Core.DTOs;
+
+public class NoContentDto
 {
-    public class NoContentDto
-    {
-    }
 }

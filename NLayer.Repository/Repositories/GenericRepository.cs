@@ -37,6 +37,7 @@ namespace NLayer.Repository.Repositories
 
         public IQueryable<T> GetAll()
         {
+            
             return _dbSet.AsNoTracking().AsQueryable();
         }
 

@@ -5,6 +5,7 @@ using Nlayer.Core.Repositories;
 using Nlayer.Core.Services;
 using Nlayer.Core.UnitOfWorks;
 using NLayer.API.Filters;
+using NLayer.API.Middlewares;
 using NLayer.Repository;
 using NLayer.Repository.Repositories;
 using NLayer.Repository.UnitofWork;
@@ -61,6 +62,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseCustomException();
 
 app.UseAuthorization();
 

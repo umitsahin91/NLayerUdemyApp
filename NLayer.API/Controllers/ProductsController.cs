@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Nlayer.Core;
 using Nlayer.Core.DTOs;
 using Nlayer.Core.Services;
+using NLayer.API.Filters;
 
 namespace NLayer.API.Controllers
 {
@@ -33,7 +34,7 @@ namespace NLayer.API.Controllers
             var productsDto=_mapper.Map<List<ProductDto>>(products.ToList());
             return CreateActionResult(CustomResponseDto<List<ProductDto>>.Success(200, productsDto));
         }
-
+        [ServiceFilter(typeof(NotFoundFilter<Product>))]
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id)
         {

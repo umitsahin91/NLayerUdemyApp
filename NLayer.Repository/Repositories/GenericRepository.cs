@@ -1,11 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Nlayer.Core.Repositories;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NLayer.Repository.Repositories
 {
@@ -22,12 +17,12 @@ namespace NLayer.Repository.Repositories
 
         public async Task AddAsync(T entity)
         {
-           await _dbSet.AddAsync(entity);
+            await _dbSet.AddAsync(entity);
         }
 
         public async Task AddRangeAsync(IEnumerable<T> entities)
         {
-           await _dbSet.AddRangeAsync(entities);
+            await _dbSet.AddRangeAsync(entities);
         }
 
         public async Task<bool> AnyAsync(Expression<Func<T, bool>> expression)
@@ -37,7 +32,7 @@ namespace NLayer.Repository.Repositories
 
         public IQueryable<T> GetAll()
         {
-            
+
             return _dbSet.AsNoTracking().AsQueryable();
         }
 
@@ -48,12 +43,12 @@ namespace NLayer.Repository.Repositories
 
         public void Remove(T entity)
         {
-           _dbSet.Remove(entity);
+            _dbSet.Remove(entity);
         }
 
         public void RemoveRange(IEnumerable<T> entities)
         {
-           _dbSet.RemoveRange(entities);
+            _dbSet.RemoveRange(entities);
         }
 
         public void Update(T entity)

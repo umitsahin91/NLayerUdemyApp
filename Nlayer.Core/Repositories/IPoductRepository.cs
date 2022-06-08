@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Nlayer.Core.Repositories
+﻿namespace Nlayer.Core.Repositories
 {
-    public interface IPoductRepository:IGenericRepository<Product>
+    public interface IPoductRepository : IGenericRepository<Product>
     {
         Task<List<Product>> GetProductsWithCategory();
     }
